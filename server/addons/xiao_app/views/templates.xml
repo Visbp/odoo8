@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="index">
+<!--
+            <t t-call="website.layout">
+                <t t-set="title">App</t>
+                <div class="oe_structure">
+                    <div class="container">
+                        <t t-foreach="apps" t-as="app">
+                            <h3 t-field="app.version"/>
+                            <div t-field="app.sequence"/>
+                            <div t-field="app.url_download"/>
+                        </t>
+
+
+                        <t t-foreach="apps" t-as="app">
+                            <p><t t-esc="app.sequence"/> <t t-esc="app.version"/> <t t-esc="app.url_download"/></p>
+                        </t>
+
+                    </div>
+                </div>
+            </t>
+-->
+         <t t-foreach="apps" t-as="app">
+           <h3 t-field="app.version"/>
+           <div t-field="app.url_download"/>
+        </t>
+
+        </template>
+    </data>
+</openerp>

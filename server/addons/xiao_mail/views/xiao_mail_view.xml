@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+    <!-- 在首页mail菜单中，新增发送邮件菜单 -->
+    <menuitem id="open_xiao_mail" name="写邮件" action="mail.action_email_compose_message_wizard" parent="mail.mail_feeds" sequence="20" />
+  </data>
+</openerp>

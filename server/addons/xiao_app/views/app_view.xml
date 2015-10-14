@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_xiao_app_form" model="ir.ui.view">
+            <field name="name">App form</field>
+            <field name="model">xiao.app</field>
+            <field name="arch" type="xml">
+                <form string="App">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="version"/>
+                            </group>
+                            <group>
+                                <field name="sequence"/>
+                                <field name="url_download" widget="url"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="action_xiao_app" model="ir.actions.act_window">
+            <field name="name">App</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">xiao.app</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="menu_xiao_app" name="App" action="action_xiao_app" parent="mail.mail_feeds" sequence="20"/>
+    </data>
+</openerp>

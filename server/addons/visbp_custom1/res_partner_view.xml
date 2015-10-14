@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+    
+        <record id="view_visbp_custom1_form" model="ir.ui.view">
+            <field name="name">visbp_custom1.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                        
+                                    <field name="date" position="before">
+                                        <field name="vip" placeholder="e.g.VIP8888"/>
+                                    </field>
+            </field>
+        </record>
+        <record id="view_visbp_custom1_tree" model="ir.ui.view">
+            <field name="name">visbp_custom1.tree</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <field name="email" position="replace">
+                    <field name="vip"/>
+                </field>
+            </field>
+        </record>
+                          
+    </data>
+</openerp>    
